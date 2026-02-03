@@ -1,5 +1,4 @@
 "use client";
-
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Box, Typography } from "@mui/material";
@@ -16,27 +15,15 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <Box
-      sx={{
-        px: { xs: 3, sm: 6, md: 10, lg: 12 },
-        position: "fixed",
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: 9999,
-        backdropFilter: "blur(12px)",
-        borderBottom: "1px solid",
-        borderColor: "divider",
-      }}
-    >
+    <Box className="px-25 top-0 left-0 w-full fixed z-9999 bg-[#121212]">
       <Box
+        className="flex flex-row justify-between items-center px-5 py-0.5 text-sm z-100"
         sx={{
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
           py: { xs: 2.5, md: 3.5 },
-          maxWidth: "1400px",
-          mx: "auto",
+          mx: "10rem",
         }}
       >
         <Typography variant="h5" fontWeight="bold">
