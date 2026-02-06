@@ -15,7 +15,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <Box className="px-25 top-0 left-0 w-full fixed z-9999 bg-[#121212]">
+    <Box className="px-25 top-0 left-0 w-full fixed z-9999 transparent">
       <Box
         className="flex flex-row justify-between items-center px-5 py-0.5 text-sm z-100"
         sx={{
