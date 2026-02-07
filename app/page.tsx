@@ -1,6 +1,8 @@
+"use client";
 import { Box, Button, Divider, Typography } from "@mui/material";
-
+import { useRouter } from "next/navigation";
 export default function Home() {
+  const router = useRouter();
   return (
     <Box
       sx={{
@@ -73,10 +75,11 @@ export default function Home() {
           }}
         >
           <Typography variant="h4" sx={{ color: "#f5f5f5" }}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, ipsa error laudantium
+            See some of the projects we’ve built, each crafted with care and attention to detail.
           </Typography>
 
           <Button
+            onClick={() => router.push("/works")}
             variant="outlined"
             sx={{
               color: "#f5f5f5",
@@ -93,14 +96,15 @@ export default function Home() {
               },
             }}
           >
-            Projects
+            <Typography variant="body1">Works</Typography>
           </Button>
 
           <Typography variant="h4" sx={{ color: "#f5f5f5", mt: 2 }}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, ipsa error laudantium
+            Learn more about who we are, how we work together to turn ideas into reliable, well-structured software.
           </Typography>
 
           <Button
+            onClick={() => router.push("/about")}
             variant="outlined"
             sx={{
               color: "#f5f5f5",
@@ -117,7 +121,7 @@ export default function Home() {
               },
             }}
           >
-            About us
+            <Typography variant="body1">About us</Typography>
           </Button>
         </Box>
       </Box>
